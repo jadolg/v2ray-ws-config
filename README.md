@@ -14,6 +14,7 @@
 
 ## How to setup the client
 
-1. Replace **server.example.com** with your domain name in client-config.json
-2. Get the **vmess** address with `echo vmess://$(cat client-config.json | base64 -w 0)`
-3. Load this in your favorite client
+1. Replace **server.example.com** with your domain name in `client-config.json`
+2. Replace the id with your uuid in `client-config.json`
+3. Get the **vmess** address with `echo vmess://$(cat client-config.json | base64 -w 0)`
+4. Load this in your favorite client
