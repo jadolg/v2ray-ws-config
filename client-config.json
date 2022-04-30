@@ -1,0 +1,15 @@
+{
+    "add": "server.example.com",
+    "aid": "0",
+    "host": "server.example.com",
+    "id": "d88fd6d6-c8c9-11ec-b245-27c1cf2f080a",
+    "net": "ws",
+    "path": "/ws",
+    "port": "443",
+    "ps": "Example server",
+    "scy": "auto",
+    "sni": "server.example.com",
+    "tls": "tls",
+    "type": "",
+    "v": "2"
+  }

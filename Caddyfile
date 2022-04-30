@@ -1,0 +1,22 @@
+server.example.com {
+  log {
+    output file /logs/access-v2ray.log {
+                       roll_size 1gb
+                       roll_keep 5
+                       roll_keep_for 720h
+               }
+               level INFO
+ 
+  }
+  tls {
+    protocols tls1.2 tls1.3
+    ciphers TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384 TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256
+    curves x25519
+  }
+  @v2ray_websocket {
+    path /ws
+    header Connection *Upgrade*
+    header Upgrade websocket
+  }
+  reverse_proxy @v2ray_websocket 127.0.0.1:10000
+}
