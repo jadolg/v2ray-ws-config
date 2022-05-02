@@ -8,7 +8,7 @@
 ## How to setup the server
 
 1. Register a new domain name pointing to your public address
-2. Edit `Caddifile` replacing **server.example.com** with your domain name
+2. Edit `Caddyfile` replacing **server.example.com** with your domain name
 3. Replace the id on line **7** in `v2ray-server.json` with a new id
 4. Start the server `docker-compose up`
 
