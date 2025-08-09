@@ -2,8 +2,6 @@ services:
   v2ray:
     image: v2fly/v2fly-core
     container_name: v2ray
-    ports:
-      - "127.0.0.1:10000:10000"
     entrypoint: v2ray run --config=/etc/v2ray/config.json
     volumes:
       - ${PWD}/v2ray-server.json:/etc/v2ray/config.json
@@ -11,7 +9,11 @@ services:
   proxy:
     image: caddy
     restart: always
-    network_mode: host
+    ports:
+      - "80:80"
+      - "443:443"
     volumes:
       - ./Caddyfile:/etc/caddy/Caddyfile
       - ./caddy:/data/
+    links:
+      - "v2ray:v2ray"
