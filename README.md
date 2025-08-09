@@ -18,3 +18,8 @@
 2. Replace the id with your uuid in `client-config.json`
 3. Get the **vmess** address with `echo vmess://$(cat client-config.json | base64 -w 0)`
 4. Load this in your favorite client
+
+## What's next?
+
+You might want to serve a website alongside your proxy to disguise your traffic as something else.
+That way if a censor sees you are accessing this server they won't see an empty page and be immediately suspicious.
