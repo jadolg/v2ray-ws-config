@@ -18,5 +18,5 @@ server.example.com {
     header Connection *Upgrade*
     header Upgrade websocket
   }
-  reverse_proxy @v2ray_websocket 127.0.0.1:10000
+  reverse_proxy @v2ray_websocket v2ray:10000
 }
