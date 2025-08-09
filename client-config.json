@@ -1,6 +1,6 @@
 {
     "add": "server.example.com",
-    "aid": "0",
+    "aid": "64",
     "host": "server.example.com",
     "id": "d88fd6d6-c8c9-11ec-b245-27c1cf2f080a",
     "net": "ws",
